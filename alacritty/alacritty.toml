@@ -1,0 +1,64 @@
+# ==========================================
+# UNIFIED ALACRITTY CONFIGURATION
+# ==========================================
+
+[window]
+# Window padding (makes it look cleaner like your screenshots)
+padding = { x = 12, y = 12 }
+
+# Slight transparency (0.9 is a good balance for Hyprland)
+opacity = 0.9
+
+# Window decorations (use "none" for a cleaner, borderless look on Hyprland)
+decorations = "full"
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "Victor Mono"
+style = "Regular"
+
+[font.bold]
+family = "Victor Mono"
+style = "Bold"
+
+[font.italic]
+family = "Victor Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "Victor Mono"
+style = "Bold Italic"
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+unfocused_hollow = true
+
+[selection]
+save_to_clipboard = true
+
+# --- Colors (Clean Dark Theme) ---
+[colors.primary]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[colors.normal]
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+[colors.bright]
+black   = "#585b70"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#a6adc8"
