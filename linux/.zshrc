@@ -122,6 +122,10 @@ export PATH=/opt/apache-maven-3.8.5/bin:$PATH
 export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 alias l='ls -l'
 alias la='ls -la'
+# DevOps Directive K8s Course Aliases
+alias t='task'
+alias tl='task --list-all'
+
 alias gpo='git push origin'
 alias gplo='git pull origin'
 alias g='git'
@@ -187,7 +191,7 @@ export TERM="xterm-256color"
 
 alias ve="fd --type f --hidden --exclude .git | fzf-tmux -m -p | xargs nvim"
 
-alias t="tmux"
+#alias t="tmux"
 alias tf="terraform"
 alias soundControl="pavucontrol"
 alias pbcopy='wl-copy'
