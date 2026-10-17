@@ -92,9 +92,11 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
-    kube-ps1
-    kubectl
-    docker
+    fast-syntax-highlighting
+    zsh-autocomplete
+  #  kube-ps1
+ #   kubectl
+#    docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -102,6 +104,10 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_QPA_PLATFORMTHEME="qt6ct"
+
 
 export EDITOR="nvim"
 # Compilation flags
@@ -191,7 +197,7 @@ export TERM="xterm-256color"
 
 alias ve="fd --type f --hidden --exclude .git | fzf-tmux -m -p | xargs nvim"
 
-#alias t="tmux"
+alias t="tmux"
 alias tf="terraform"
 alias soundControl="pavucontrol"
 alias pbcopy='wl-copy'
@@ -227,3 +233,4 @@ function calculate_dockerimagesize() {
 alias reboot_bluetooth_system='systemctl --user restart bluetooth'
 
 # convert networkcoexistence.png -resize 60% networkcoexistence.png
+export PATH="$HOME/.cargo/bin:$PATH"

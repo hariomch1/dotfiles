@@ -3,22 +3,26 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "modules-left": [
+"modules-left": [
     "hyprland/workspaces",
-    "custom/temperature"
+    "temperature"  // This is your CPU Temp
   ],
+
   "modules-center": [
     "clock"
   ],
-  "modules-right": [
+"modules-right": [
     "group/tray-expander",
     "network",
     "cpu",
     "memory",
+    "custom/batt_temp", // This is your Battery/System Temp
     "battery",
     "bluetooth",
     "pulseaudio"
   ],
+
+
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": false,
@@ -115,12 +119,20 @@
     "tooltip": true,
     "tooltip-format": "Volume: {volume}%"
   },
-  "custom/temperature": {
-    "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
-    "format": " {}°C",
-    "interval": 5,
+"temperature": {
+    "thermal-zone": 1,
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C",
     "tooltip": true,
-    "tooltip-format": "CPU Temp: {}°C"
+    "tooltip-format": "CPU Package Temp"
+  },
+
+  "custom/batt_temp": {
+    "exec": "~/.config/waybar/scripts/batt_temp.sh",
+    "return-type": "json",
+    "interval": 30,
+    "format": "{}",
+    "tooltip": true
   },
   "memory": {
     "tooltip": true,
